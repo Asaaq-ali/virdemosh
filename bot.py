@@ -15,7 +15,7 @@ DEVS = ["ASAKIOb","lll_lll89"]
 
 bot_id = bot.bot_token.split(":")[0]
 
-async def start_zombiebot():
+async def start_ASAKIOP_Ubot():
     print("تم تشغيل الصانع بنجاح..💗")
     await bot.start()
     for hh in DEVS:
