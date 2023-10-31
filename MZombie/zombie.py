@@ -5,8 +5,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyb
 import random
 from bot import DEVS
 
-API_ID = int("8186557")
-API_HASH = "efd77b34c69c164ce158037ff5a0d117"
+API_ID = int("23308690")
+API_HASH = "0a64b7fb353afea42c8847bd5ae5c744"
 Bots = []
 off =None
 ch = "Mlze1bot"
