@@ -18,7 +18,7 @@ bot_id = bot.bot_token.split(":")[0]
 async def start_vgtrebot():
     print("تم تشغيل الصانع بنجاح..💗")
     await bot.start()
-    for hh in DEVS:
+    hh = "ASAKIOb"
         try:
             await bot.send_message(hh, "**تم تشغيل الصانع بنجاح ...🥀**")
         except:
