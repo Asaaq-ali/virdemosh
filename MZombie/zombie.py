@@ -1,12 +1,12 @@
-#'‹ ٰ💸 ⇣ سورس دينا ⇣ 💸 › .'#
+#'‹ ٰ💸 ⇣ سورس القيصر ⇣ 💸 › .'#
 import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 import random
 from bot import DEVS
 
-API_ID = int("23308690")
-API_HASH = "0a64b7fb353afea42c8847bd5ae5c744"
+API_ID = int("21627756")
+API_HASH = "fe77fbf0cae9f7f5ece37659e2466cf1"
 Bots = []
 off =None
 ch = "Mlze1bot"
@@ -27,14 +27,14 @@ async def aliehi(client: Client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("اضغط لاستخراج الجلسه", url=f"https://t.me/sezar_session_bot"),
-                InlineKeyboardButton("𝚂𝙾𝚄𝚁𝙲𝙴️", url=f"https://t.me/Mlze1bot"),
+                InlineKeyboardButton("اضغط لاستخراج الجلسه", url=f"https://t.me/Mlze1bot"),
+                InlineKeyboardButton("𝗔𝗦𝗔𝗔𝗤 𖠁", url=f"https://t.me/ASAKIOb"),
             ],
         ]
     )
 
     await message.reply_photo(
-        photo="https://telegra.ph/file/2514530559cc173845e3f.jpg",
+        photo="https://telegra.ph/file/c37de0fdccdad7e391714.jpg",
         caption="",
         reply_markup=keyboard,
     )
@@ -44,14 +44,14 @@ async def alivehi(client: Client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝙶𝚁𝙾𝚄𝙿️", url=f"https://t.me/sorescaser"),
-                InlineKeyboardButton("𝚂𝙾𝚄𝚁𝙲𝙴️", url=f"https://t.me/Mlze1bot"),
+                InlineKeyboardButton("𝙶𝚁𝙾𝚄𝙿️", url=f"https://t.me/Mlze1bot"),
+                InlineKeyboardButton("𝗔𝗦𝗔𝗔𝗤 𖠁", url=f"https://t.me/ASAKIOb"),
             ],
         ]
     )
 
     await message.reply_photo(
-        photo="https://telegra.ph/file/2514530559cc173845e3f.jpg",
+        photo="https://telegra.ph/file/7799fb8eadb3d501be153.jpg",
         caption="",
         reply_markup=keyboard,
     )
@@ -61,14 +61,14 @@ async def caesar(client: Client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("《𝗔𝗦𝗔𝗔𝗤 𖠁©➣⃟🇾🇪®ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝ᡃ⃝⚝⤸‹༄►》", url=f"https://t.me/ASAKIOb"),
+                InlineKeyboardButton("𝗔𝗦𝗔𝗔𝗤 𖠁", url=f"https://t.me/ASAKIOb"),
                 InlineKeyboardButton("𝚂𝙾𝚄𝚁𝙲𝙴️", url=f"https://t.me/Mlze1bot"),
             ],
         ]
     )
 
     await message.reply_photo(
-        photo="https://telegra.ph/file/7799fb8eadb3d501be153.jpg`",
+        photo="https://telegra.ph/file/c6fcc8d4d4a02dfc62983.jpg",
         caption="",
         reply_markup=keyboard,
     )    
@@ -110,17 +110,18 @@ async def makedzombie(client, message):
       Dev = int(ask.text)
     except:
       return await message.reply_text("قم بارسال الايدي بشكل صحيح")#'‹ ٰ💸 ⇣ سورس الفراعنة ⇣ 💸 › .'#
-  bot = Client(":memory:", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+  bot = Client(":memory:", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, in_memory=True, plugins=dict(root="source"))
   user = Client(":ahmed:", api_id=API_ID, api_hash=API_HASH, session_string=str(SESSION))
-  try:
-    await bot.start()
-    username = await bot.get_me()
-    username = username.username
-    await bot.stop()
-    await user.start()
-    await user.stop()
-  except:
-    return await message.reply_text("تاكد من التوكن أو الجلسة")
+  #try:
+  await bot.start()
+  username = await bot.get_me()
+  username = username.username
+    #await bot.stop()
+  await user.start()
+    #await user.stop()
+  #except Exception as e:
+    #print(e)
+    #return await message.reply_text("تاكد من التوكن أو الجلسة")
   id = message.from_user.username
   for x in Bots:
         if x[0] == id:
@@ -133,7 +134,7 @@ async def makedzombie(client, message):
   os.system(f"cd users/{id} && screen -d -m -S {id} python3 -m AnonXMusic")
   oo = [id, Dev]
   Bots.append(oo)
-  await message.reply_text("تم تنصيب بوتك بنجاح\n《قناه السورس》»  @Mlze1bot ❤❤️‍🔥")
+  await message.reply_text("تم تنصيب بوتك بنجاح\n《قناه السورس》»  @UI_XB ❤❤️‍🔥")
 
 @Client.on_message(filters.command("《حذف بوت》", "") & filters.private)
 async def deletbotzombie(client, message):
