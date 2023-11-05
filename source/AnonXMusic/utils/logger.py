@@ -1,8 +1,8 @@
 from pyrogram.enums import ParseMode
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import is_on_off
-from config import LOGGER_ID
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import is_on_off
+from source.config import LOGGER_ID
 
 
 async def play_logs(message, streamtype):
