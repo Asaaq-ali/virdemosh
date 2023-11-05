@@ -13,13 +13,15 @@ from bot import bot
 from bot import DEVS
 from bot import bot_id
 
-OWNER_ID = int("6228635168")
+OWNER_ID = int("6218149232")
 
+
+#r = redis.from_url("redis://redis-10142.c263.us-east-1-2.ec2.cloud.redislabs.com:10142")
 r = redis.Redis(
   host='redis-13524.c84.us-east-1-2.ec2.cloud.redislabs.com',
   port=13524,
   password='J2tSRdAbiuSaFU3ROH2UqWWTahWR00b9')
-
+    
 
 
 Keyard = ReplyKeyboardMarkup(
@@ -62,9 +64,9 @@ Keyboard = ReplyKeyboardMarkup(
 async def for_users (bot,m):
    if check(m.from_user.id):
      kep = ReplyKeyboardMarkup([["《صنع بوت》", "《حذف بوت》"], ["البوتات المصنوعه"], ["تعطيل المجاني", "تفعيل المجاني"], ["تعطيل التواصل", "تفعيل التواصل"], ["السورس"], ["الغاء"]], resize_keyboard=True)
-     return await m.reply_text(f"╮⦿ اهـلا بڪ عزيـزي المطـور الاساسـي  ⁽ {m.from_user.mention} ₎\n│⎋ اليـكـ المصنـع الخـاص ديــــنا \n╯⦿ قنـاة السـورس : ❲ @Mlze1bot ❳", reply_markup=Keyboard)
+     return await m.reply_text(f"╮⦿ اهـلا بڪ عزيـزي المطـور الاساسـي  ⁽ {m.from_user.mention} ₎\n│⎋ اليـكـ المصنـع الخـاص بن \n╯⦿ قنـاة السـورس : ❲ @BENfiles ❳", reply_markup=Keyboard)
    kep = ReplyKeyboardMarkup([["《صنع بوت》", "《حذف بوت》"], ["《صنع جلسه》"], ["《السورس》", "《مطور السورس》"]], resize_keyboard=True)
-   await m.reply_text(f"╮⦿ اهـلا بڪ عزيـزي ⁽ {m.from_user.mention} ₎\n│⎋ اليـكـ المصنـع الخـاص ديــــنا \n╯⦿ قنـاة السـورس : ❲ @Mlze1bot ❳", reply_markup=kep)
+   await m.reply_text(f"╮⦿ اهـلا بڪ عزيـزي ⁽ {m.from_user.mention} ₎\n│⎋ اليـكـ المصنـع الخـاص بن \n╯⦿ قنـاة السـورس : ❲ @BENfiles ❳", reply_markup=kep)
    if not check(m.from_user.id):
      await check_sub(bot, m)
    if not is_user(m.from_user.id):
@@ -154,7 +156,7 @@ async def keyboard_for_admins(bot, m):
         r.delete(f"enable_force_subscribe{bot_id}")
       
       if m.text == 'ضع قناة الاشتراك':
-        await m.reply("• ارسل معرف القناة العام مثال @Mlze1bot", quote=True)
+        await m.reply("• ارسل معرف القناة العام مثال @COURSE_CAESAR", quote=True)
         r.set(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}",1)
         r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
         r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
@@ -188,7 +190,7 @@ async def keyboard_for_admins(bot, m):
               get = await bot.get_chat(int(admin))
               text += f'• [{get.first_name}](tg://user?id={admin})\n'
             except:
-              text += f'• [@Mlze1bot](tg://user?id={admin})\n'
+              text += f'• [@COURSE_CAESAR](tg://user?id={admin})\n'
           await m.reply(text, quote=True)
           
       if m.text == 'اذاعة':
@@ -622,5 +624,5 @@ def get_groups_backup() -> str:
 	return 'groups.txt'
 
 if not r.get(f"bot_owner{bot_id}"):
-   owner = int(input("Enter owner id : "))
+   owner = 5451878368
    r.set(f"bot_owner{bot_id}", owner)
