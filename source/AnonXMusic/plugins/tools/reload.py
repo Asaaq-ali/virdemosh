@@ -5,13 +5,13 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from AnonXMusic import app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.misc import db
-from AnonXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
-from AnonXMusic.utils.decorators import ActualAdminCB, AdminActual, language
-from AnonXMusic.utils.formatters import alpha_to_int, get_readable_time
-from config import BANNED_USERS, adminlist, lyrical
+from source.AnonXMusic import app
+from source.AnonXMusic.core.call import Anony
+from source.AnonXMusic.misc import db
+from source.AnonXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
+from source.AnonXMusic.utils.decorators import ActualAdminCB, AdminActual, language
+from source.AnonXMusic.utils.formatters import alpha_to_int, get_readable_time
+from source.config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
 
