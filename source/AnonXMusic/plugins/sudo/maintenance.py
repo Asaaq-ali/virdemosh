@@ -1,15 +1,15 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AnonXMusic import app
-from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import (
+from source.AnonXMusic import app
+from source.AnonXMusic.misc import SUDOERS
+from source.AnonXMusic.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
     maintenance_on,
 )
-from strings import get_string
+from source.strings import get_string
 
 
 @app.on_message(filters.command(["maintenance"]) & SUDOERS)
