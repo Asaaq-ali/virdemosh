@@ -6,10 +6,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from AnonXMusic import app
-from AnonXMusic.misc import _boot_
-from AnonXMusic.plugins.sudo.sudoers import sudoers_list
-from AnonXMusic.utils.database import (
+from source.AnonXMusic import app
+from source.AnonXMusic.misc import _boot_
+from source.AnonXMusic.plugins.sudo.sudoers import sudoers_list
+from source.AnonXMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -17,11 +17,11 @@ from AnonXMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from AnonXMusic.utils.decorators.language import LanguageStart
-from AnonXMusic.utils.formatters import get_readable_time
-from AnonXMusic.utils.inline import help_pannel, private_panel, start_panel
-from config import BANNED_USERS
-from strings import get_string
+from source.AnonXMusic.utils.decorators.language import LanguageStart
+from source.AnonXMusic.utils.formatters import get_readable_time
+from source.AnonXMusic.utils.inline import help_pannel, private_panel, start_panel
+from source.config import BANNED_USERS
+from source.strings import get_string
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
