@@ -1,6 +1,6 @@
-from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import get_lang, is_maintenance
-from strings import get_string
+from source.AnonXMusic.misc import SUDOERS
+from source.AnonXMusic.utils.database import get_lang, is_maintenance
+from source.strings import get_string
 
 
 def language(mystic):
