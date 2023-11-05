@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from AnonXMusic.utils.decorators import language
-from AnonXMusic.utils.inline.settings import playmode_users_markup
-from config import BANNED_USERS
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from source.AnonXMusic.utils.decorators import language
+from source.AnonXMusic.utils.inline.settings import playmode_users_markup
+from source.config import BANNED_USERS
 
 
 @app.on_message(filters.command(["playmode", "mode"]) & filters.group & ~BANNED_USERS)
