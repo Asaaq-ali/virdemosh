@@ -6,8 +6,8 @@ import aiohttp
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonXMusic import app
+from source.AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from source.AnonXMusic import app
 from asyncio import gather
 
 
