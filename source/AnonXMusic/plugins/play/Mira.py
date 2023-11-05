@@ -2,8 +2,8 @@ import asyncio
 
 from pyrogram import Client, filters
 import config
-from AnonXMusic.utils.decorators import AdminRightsCheck
-from AnonXMusic.utils.decorators import AdminActual
+from source.AnonXMusic.utils.decorators import AdminRightsCheck
+from source.AnonXMusic.utils.decorators import AdminActual
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
@@ -13,8 +13,8 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from config import BANNED_USERS
+from source.AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from source.config import BANNED_USERS
 
 @app.on_message(filters.regex("^ميوزك$") & filters.group & ~BANNED_USERS) 
 @AdminRightsCheck
