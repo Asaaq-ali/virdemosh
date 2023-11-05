@@ -1,7 +1,7 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from AnonXMusic import app
+from source.AnonXMusic import app
 
 @app.on_message(filters.command(["الرابط","/link"],""))
 async def invitelink(client, message):
