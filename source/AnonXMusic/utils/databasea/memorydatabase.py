@@ -1,6 +1,6 @@
 
-from config import PRIVATE_BOT_MODE
-from AnonXMusic.core.mongo import mongodb
+from source.config import PRIVATE_BOT_MODE
+from source.AnonXMusic.core.mongo import mongodb
 
 
 commanddb = mongodb.commands
