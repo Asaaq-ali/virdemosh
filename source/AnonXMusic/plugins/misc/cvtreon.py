@@ -4,8 +4,8 @@ from pyrogram import Client, filters
 from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
                             InlineKeyboardMarkup, Message)
 
-from AnonXMusic import app
-from config import BANNED_USERS
+from source.AnonXMusic import app
+from source.config import BANNED_USERS
 
 
 @app.on_message(
