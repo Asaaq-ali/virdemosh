@@ -15,11 +15,11 @@ from bot import bot_id
 
 OWNER_ID = int("6228635168")
 
-
 r = redis.Redis(
-    host="127.0.0.1",
-    port=6379,)
-    
+  host='redis-13524.c84.us-east-1-2.ec2.cloud.redislabs.com',
+  port=13524,
+  password='J2tSRdAbiuSaFU3ROH2UqWWTahWR00b9')
+
 
 
 Keyard = ReplyKeyboardMarkup(
