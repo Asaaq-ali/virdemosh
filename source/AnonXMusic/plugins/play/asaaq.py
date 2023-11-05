@@ -1,14 +1,14 @@
 import asyncio
 from pyrogram import Client, filters
-from AnonXMusic import app
+from source.AnonXMusic import app
 import random
-from config import BANNED_USERS
+from source.config import BANNED_USERS
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from AnonXMusic import app
-from AnonXMusic.utils.database import get_served_chats
-from config import LOGGER_ID
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import get_served_chats
+from source.config import LOGGER_ID
 
 iddof=[] 
 
