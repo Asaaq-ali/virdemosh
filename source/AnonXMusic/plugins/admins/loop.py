@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import get_loop, set_loop
-from AnonXMusic.utils.decorators import AdminRightsCheck
-from AnonXMusic.utils.inline import close_markup
-from config import BANNED_USERS
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import get_loop, set_loop
+from source.AnonXMusic.utils.decorators import AdminRightsCheck
+from source.AnonXMusic.utils.inline import close_markup
+from source.config import BANNED_USERS
 
 
 @app.on_message(filters.command(["اعاده", "دينا عيد"],"") & filters.group & ~BANNED_USERS)
