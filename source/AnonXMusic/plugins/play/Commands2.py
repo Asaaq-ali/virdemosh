@@ -2,7 +2,7 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from source.AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
                             InlineKeyboardMarkup, Message)
@@ -10,24 +10,24 @@ from youtubesearchpython.__future__ import VideosSearch
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InputMediaPhoto, InputMediaVideo
-from config import SUPPORT_CHANNEL, SUPPORT_CHAT
-from AnonXMusic import app
+from source.config import SUPPORT_CHANNEL, SUPPORT_CHAT
+from source.AnonXMusic import app
 import config
-from config import BANNED_USERS, OWNER_ID
-from AnonXMusic import Telegram, YouTube, app
-from AnonXMusic.misc import SUDOERS
-from AnonXMusic.plugins.sudo.sudoers import sudoers_list
-from AnonXMusic.utils.database import (add_served_chat,
+from source.config import BANNED_USERS, OWNER_ID
+from source.AnonXMusic import Telegram, YouTube, app
+from source.AnonXMusic.misc import SUDOERS
+from source.AnonXMusic.plugins.sudo.sudoers import sudoers_list
+from source.AnonXMusic.utils.database import (add_served_chat,
                                        add_served_user,
                                        blacklisted_chats,
                                        get_assistant, get_lang,
                                        is_on_off) 
                                        
-from AnonXMusic.utils.decorators.language import LanguageStart
-from AnonXMusic.utils.inline import (help_pannel, private_panel) 
+from source.AnonXMusic.utils.decorators.language import LanguageStart
+from source.AnonXMusic.utils.inline import (help_pannel, private_panel) 
                                      
 
-from AnonXMusic import check_client
+from source.AnonXMusic import check_client
 
 
 @app.on_callback_query(filters.regex("tt"))
