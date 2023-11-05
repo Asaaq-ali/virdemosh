@@ -2,10 +2,10 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import set_cmode
-from AnonXMusic.utils.decorators.admins import AdminActual
-from config import BANNED_USERS
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import set_cmode
+from source.AnonXMusic.utils.decorators.admins import AdminActual
+from source.config import BANNED_USERS
 
 
 @app.on_message(filters.command(["channelplay"],"") & filters.group & ~BANNED_USERS)
