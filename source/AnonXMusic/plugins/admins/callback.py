@@ -3,10 +3,10 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from AnonXMusic import YouTube, app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.misc import SUDOERS, db
-from AnonXMusic.utils.database import (
+from source.AnonXMusic import YouTube, app
+from source.AnonXMusic.core.call import Anony
+from source.AnonXMusic.misc import SUDOERS, db
+from source.AnonXMusic.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -17,12 +17,12 @@ from AnonXMusic.utils.database import (
     music_on,
     set_loop,
 )
-from AnonXMusic.utils.decorators.language import languageCB
-from AnonXMusic.utils.formatters import seconds_to_min
-from AnonXMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
-from AnonXMusic.utils.stream.autoclear import auto_clean
-from AnonXMusic.utils.thumbnails import get_thumb
-from config import (
+from source.AnonXMusic.utils.decorators.language import languageCB
+from source.AnonXMusic.utils.formatters import seconds_to_min
+from source.AnonXMusic.utils.inline import close_markup, stream_markup, stream_markup_timer
+from source.AnonXMusic.utils.stream.autoclear import auto_clean
+from source.AnonXMusic.utils.thumbnails import get_thumb
+from source.config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
     STREAM_IMG_URL,
@@ -32,7 +32,7 @@ from config import (
     confirmer,
     votemode,
 )
-from strings import get_string
+from source.strings import get_string
 
 checker = {}
 upvoters = {}
