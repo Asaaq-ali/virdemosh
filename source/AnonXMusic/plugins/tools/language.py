@@ -2,11 +2,11 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import get_lang, set_lang
-from AnonXMusic.utils.decorators import ActualAdminCB, language, languageCB
-from config import BANNED_USERS
-from strings import get_string, languages_present
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import get_lang, set_lang
+from source.AnonXMusic.utils.decorators import ActualAdminCB, language, languageCB
+from source.config import BANNED_USERS
+from source.strings import get_string, languages_present
 
 
 def lanuages_keyboard(_):
