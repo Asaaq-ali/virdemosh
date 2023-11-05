@@ -4,7 +4,7 @@ import re
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import Message
-from AnonXMusic import app
+from source.AnonXMusic import app
 
 @app.on_message(filters.command(["زخرفه"],""))
 async def zahrafa(c: Client, m: Message):
