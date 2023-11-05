@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AnonXMusic import YouTube, app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.misc import db
-from AnonXMusic.utils import AdminRightsCheck, seconds_to_min
-from AnonXMusic.utils.inline import close_markup
-from config import BANNED_USERS
+from source.AnonXMusic import YouTube, app
+from source.AnonXMusic.core.call import Anony
+from source.AnonXMusic.misc import db
+from source.AnonXMusic.utils import AdminRightsCheck, seconds_to_min
+from source.AnonXMusic.utils.inline import close_markup
+from source.config import BANNED_USERS
 
 
 @app.on_message(
