@@ -3,6 +3,7 @@ from telethon import TelegramClient
 import traceback
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 from pyrogram import Client, filters
+from pyrogram1 import Client as Client1
 from asyncio.exceptions import TimeoutError
 from telethon.sessions import StringSession
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -14,7 +15,14 @@ from pyrogram.errors import (
     SessionPasswordNeeded,
     PasswordHashInvalid
 )
-
+from pyrogram1.errors import (
+    ApiIdInvalid as ApiIdInvalid1,
+    PhoneNumberInvalid as PhoneNumberInvalid1,
+    PhoneCodeInvalid as PhoneCodeInvalid1,
+    PhoneCodeExpired as PhoneCodeExpired1,
+    SessionPasswordNeeded as SessionPasswordNeeded1,
+    PasswordHashInvalid as PasswordHashInvalid1
+)
 from telethon.errors import (
     ApiIdInvalidError,
     PhoneNumberInvalidError,
@@ -37,6 +45,15 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             if query == "pyrogram":
                 await callback_query.answer()
                 await generate_session(bot, callback_query.message)
+            elif query == "pyrogram1":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message, old_pyro=True)
+            elif query == "pyrogram_bot":
+                await callback_query.answer("» ᴛʜᴇ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴡɪʟʟ ʙᴇ ᴏғ ᴩʏʀᴏɢʀᴀᴍ ᴠ2.", show_alert=True)
+                await generate_session(bot, callback_query.message, is_bot=True)
+            elif query == "telethon_bot":
+                await callback_query.answer()
+                await generate_session(bot, callback_query.message, telethon=True, is_bot=True)
             elif query == "telethon":
                 await callback_query.answer()
                 await generate_session(bot, callback_query.message, telethon=True)
