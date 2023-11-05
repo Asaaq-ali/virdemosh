@@ -5,20 +5,20 @@ from pyromod import listen
 
 bot = Client(
     "mo",
-    api_id=23308690,
-    api_hash="0a64b7fb353afea42c8847bd5ae5c744",
-    bot_token="6923150925:AAFZ_6cSBZp2iehivEPE816D-5WPvEyyipI",
+    api_id=21627756,
+    api_hash="fe77fbf0cae9f7f5ece37659e2466cf1",
+    bot_token="6445765629:AAGYzIlQDSfpBcqlklDJ_WU_tNrZif_Pcrs",
     plugins=dict(root="MZombie")
     )
 
-DEVS = ["ASAKIOb","lll_lll89"]
+DEVS = ["lll_lll89"]
 
 bot_id = bot.bot_token.split(":")[0]
 
-async def start_vgtrebot():
+async def start_zombiebot():
     print("تم تشغيل الصانع بنجاح..💗")
     await bot.start()
-    hh = "ASAKIOb"
+    for hh in DEVS:
         try:
             await bot.send_message(hh, "**تم تشغيل الصانع بنجاح ...🥀**")
         except:
