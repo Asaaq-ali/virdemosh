@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
-from AnonXMusic import app as Client
-from AnonXMusic import app
+from source.AnonXMusic import app as Client
+from source.AnonXMusic import app
 
 
 @Client.on_callback_query(filters.regex("arbic"))
