@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from AnonXMusic import app
-from AnonXMusic.utils.database import (
+from source.AnonXMusic import app
+from source.AnonXMusic.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -25,16 +25,16 @@ from AnonXMusic.utils.database import (
     skip_off,
     skip_on,
 )
-from AnonXMusic.utils.decorators.admins import ActualAdminCB
-from AnonXMusic.utils.decorators.language import language, languageCB
-from AnonXMusic.utils.inline.settings import (
+from source.AnonXMusic.utils.decorators.admins import ActualAdminCB
+from source.AnonXMusic.utils.decorators.language import language, languageCB
+from source.AnonXMusic.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from AnonXMusic.utils.inline.start import private_panel
-from config import BANNED_USERS, OWNER_ID
+from source.AnonXMusic.utils.inline.start import private_panel
+from source.config import BANNED_USERS, OWNER_ID
 
 
 @app.on_message(
