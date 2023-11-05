@@ -1,6 +1,6 @@
 import os
 
-from config import autoclean
+from source.config import autoclean
 
 
 async def auto_clean(popped):
