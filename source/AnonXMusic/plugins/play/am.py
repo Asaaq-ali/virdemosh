@@ -1,13 +1,13 @@
 import asyncio
 from pyrogram import Client, filters
-from config import BANNED_USERS
+from source.config import BANNED_USERS
 
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
                             InlineKeyboardMarkup, Message)
 
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from source.AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
 @app.on_message(
