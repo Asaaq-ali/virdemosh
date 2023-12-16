@@ -1,7 +1,7 @@
 # متطلبات التنصيب #
-OWNER = ["ASAKIOb"]
+OWNER = ["lllliioooll"]
 OWNER_NAME = "ASAAQ"
-BOT_TOKEN = "6496026062:AAGtP4jAMXb3Mel1ukEfkIdjzLjUjePZFZA"
+BOT_TOKEN = "lllliioooll"
 DATABASE = "mongodb+srv://Elkber:Elkber@cluster0.feuljpn.mongodb.net/?retryWrites=true&w=majority"
 CHANNEL = "https://t.me/Mlze1bot"
 GROUP = "https://t.me/Mlze1bot"
